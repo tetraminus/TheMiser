@@ -1,0 +1,14 @@
+{
+  "${modID}:HoldsGoldPower": {
+    "NAME": "Holds Gold",
+    "DESCRIPTIONS": [
+      "When you kill this enemy, add #b", " gold to the reward screen."
+    ]
+  },
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  }
+}

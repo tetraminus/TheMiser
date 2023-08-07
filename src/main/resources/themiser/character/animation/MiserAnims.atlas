@@ -1,0 +1,13 @@
+
+MiserAnims.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+miser
+  rotate: false
+  xy: 1, 1
+  size: 70, 90
+  orig: 144, 144
+  offset: 35, 2
+  index: -1

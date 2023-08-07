@@ -1,0 +1,1 @@
+{"skeleton":{"width":144,"height":144,"fps":24,"hash":" ","name":"Armature"},"bones":[{"x":9.7184,"y":178.7704,"scaleX":4.8,"scaleY":4,"name":"root"}],"slots":[{"name":"miser","bone":"root","attachment":"miser"}],"skins":{"default":{"miser":{"miser":{"name":"miser","width":70,"height":90}}}}}

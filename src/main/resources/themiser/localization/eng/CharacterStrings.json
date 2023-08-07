@@ -1,0 +1,13 @@
+{
+  "${modID}:TheMiser": {
+    "NAMES": [
+      "The Miser",
+      "the Miser"
+    ],
+    "TEXT": [
+      "The remnant of a shopkeeper overcome with greed. NL It now wanders the Spire, looking for more gold to hoard.",
+      " NL You ready your new belongings (Mostly gold.(A lot of gold.(And some weapons too.))).",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~greedy~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+    ]
+  }
+}

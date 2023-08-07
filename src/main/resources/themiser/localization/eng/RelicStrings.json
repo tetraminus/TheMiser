@@ -1,0 +1,12 @@
+{
+  "${modID}:CurseOfMidas": {
+    "NAME": "Curse of Midas",
+    "FLAVOR": "Greed is good",
+    "DESCRIPTIONS": [
+      "When you deal unblocked damage, gain #b",
+      " Gold. NL When you take unblocked damage, the enemy that attacked you gains #b",
+      " #y${modID}:holds_gold. #rCombat #rrewards #rcost #rgold."
+    ]
+  }
+
+}
