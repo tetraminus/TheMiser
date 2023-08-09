@@ -1,4 +1,12 @@
 {
+  "${modID}:StrikeGold": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Gain !M! Gold."
+  },
+  "${modID}:DefendGold": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. lose !M! Gold."
+  },
   "${modID}:ExampleCard": {
     "NAME": "Name",
     "DESCRIPTION": "Description.",

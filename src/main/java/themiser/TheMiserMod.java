@@ -5,6 +5,7 @@ import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import themiser.cards.BaseCard;
 import themiser.characters.TheMiser;
 import themiser.powers.HoldsGoldPower;
 import themiser.relics.BaseRelic;
@@ -37,7 +38,8 @@ public class TheMiserMod implements
         EditKeywordsSubscriber,
         PostInitializeSubscriber,
         EditCharactersSubscriber,
-        EditRelicsSubscriber {
+        EditRelicsSubscriber,
+        EditCardsSubscriber{
     public static ModInfo info;
     public static String modID; //Edit your pom.xml to change this
     static { loadModInfo(); }
@@ -72,9 +74,6 @@ public class TheMiserMod implements
                 BG_ATTACK, BG_SKILL, BG_POWER, ENERGY_ORB,
                 BG_ATTACK_P, BG_SKILL_P, BG_POWER_P, ENERGY_ORB_P,
                 SMALL_ORB);
-
-
-
     }
 
     public TheMiserMod() {
@@ -228,5 +227,13 @@ public class TheMiserMod implements
                     if (info.seen)
                         UnlockTracker.markRelicAsSeen(relic.relicId);
                 });
+    }
+
+    @Override
+    public void receiveEditCards() {
+        new AutoAdd(modID)
+                .packageFilter(BaseCard.class)
+                .setDefaultSeen(true)
+                .cards();
     }
 }
