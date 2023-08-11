@@ -9,10 +9,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import themiser.actions.LoseGoldAction;
 import themiser.characters.TheMiser;
 import themiser.util.CardStats;
 
-public class StrikeGold extends BaseCard {
+public class StrikeGold extends GoldCard {
     public static final String ID = makeID(StrikeGold.class.getSimpleName());
     private static final CardStats info = new CardStats(
             TheMiser.Enums.CARD_COLOR,
@@ -22,9 +23,11 @@ public class StrikeGold extends BaseCard {
             1
     );
 
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 2;
-    private static final int MAGIC = 5;
+    private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = 3;
+    private static final int GOLD = 10;
+    private static final int UPG_GOLD = -2;
+
 
 
 
@@ -32,15 +35,18 @@ public class StrikeGold extends BaseCard {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
-        setMagic(MAGIC);
+        setGold(GOLD, UPG_GOLD);
+        tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STARTER_STRIKE);
+
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAllEnemiesAction(p, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new GainGoldAction(magicNumber));
-
+        if (Cost()) {
+            addToBot(new DamageAllEnemiesAction(p, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
     }
 
     @Override

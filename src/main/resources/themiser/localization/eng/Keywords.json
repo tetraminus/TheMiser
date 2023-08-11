@@ -10,6 +10,13 @@
       "text"
     ],
     "DESCRIPTION": "This is displayed in the tooltip. Note, spaces are not allowed in NAMES. Also, they should be entirely lowercase. For multi-word keywords, see the next one."
+  },{
+  "PROPER_NAME": "Cost",
+  "NAMES": [
+    "Cost",
+    "cost"
+  ],
+  "DESCRIPTION": "If you have enough gold, continue this card's text."
   },
   {
     "PROPER_NAME": "Holds Gold",

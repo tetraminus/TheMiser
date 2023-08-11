@@ -12,8 +12,8 @@ import themiser.util.CardStats;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
-public class FlingFistfuls extends BaseCard {
-    public static final String ID = makeID(StrikeGold.class.getSimpleName());
+public class FlingFistfuls extends GoldCard {
+    public static final String ID = makeID(FlingFistfuls.class.getSimpleName());
     private static final CardStats info = new CardStats(
             TheMiser.Enums.CARD_COLOR,
             CardType.ATTACK,
@@ -25,8 +25,8 @@ public class FlingFistfuls extends BaseCard {
     private static final int DAMAGE = 5;
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
-    private static final int GOLD = 20;
-    private static final int UPG_GOLD = 10;
+    private static final int GOLD = 10;
+    private static final int UPG_GOLD = -5;
 
 
 
@@ -37,7 +37,8 @@ public class FlingFistfuls extends BaseCard {
 
         setDamage(DAMAGE);
         setMagic(MAGIC, UPG_MAGIC);
-        setCustomVar("Gold", GOLD, UPG_GOLD);
+        setGold(GOLD, UPG_GOLD);
+
 
 
     }
@@ -45,16 +46,10 @@ public class FlingFistfuls extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            if (player.gold >= customVar("Gold")) {
-                return;
+            if (Cost()) {
+                addToBot(new DamageAllEnemiesAction(p, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             }
-            addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-            addToBot(new LoseGoldAction(customVar("Gold")));
-
-
         }
-
-
     }
 
     @Override

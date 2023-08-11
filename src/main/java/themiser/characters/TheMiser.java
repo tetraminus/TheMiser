@@ -26,6 +26,8 @@ import com.megacrit.cardcrawl.relics.PrismaticShard;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import themiser.cards.DefendGold;
+import themiser.cards.FlingFistfuls;
+import themiser.cards.GoldBarrier;
 import themiser.cards.StrikeGold;
 import themiser.relics.CurseOfMidas;
 
@@ -95,13 +97,17 @@ public class TheMiser extends CustomPlayer {
         retVal.add(StrikeGold.ID);
         retVal.add(StrikeGold.ID);
         retVal.add(StrikeGold.ID);
-        retVal.add(StrikeGold.ID);
+
         retVal.add(DefendGold.ID);
         retVal.add(DefendGold.ID);
         retVal.add(DefendGold.ID);
         retVal.add(DefendGold.ID);
         retVal.add(DefendGold.ID);
-        retVal.add(DefendGold.ID);
+
+        retVal.add(FlingFistfuls.ID);
+
+        retVal.add(GoldBarrier.ID);
+
 
 
 

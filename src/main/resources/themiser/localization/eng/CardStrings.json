@@ -1,11 +1,19 @@
 {
+  "${modID}:GoldBarrier": {
+    "NAME": "Gold Barrier",
+    "DESCRIPTION": "${modID}:Cost !${modID}:Gold! NL Gain !B! block"
+  },
+  "${modID}:FlingFistfuls": {
+    "NAME": "Fling Fistfuls",
+    "DESCRIPTION": "Deal !D! damage to a random enemy and ${modID}:Cost !${modID}:Gold! Gold !M! times. "
+  },
   "${modID}:StrikeGold": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Gain !M! Gold."
+    "DESCRIPTION": "${modID}:Cost !${modID}:Gold! NL Deal !D! damage to ALL enemies."
   },
   "${modID}:DefendGold": {
     "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block. lose !M! Gold."
+    "DESCRIPTION": "${modID}:Cost !${modID}:Gold! NL Gain !B! Block."
   },
   "${modID}:ExampleCard": {
     "NAME": "Name",
