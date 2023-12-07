@@ -1,0 +1,11 @@
+{
+  "${ModID}:GreedCurse": {
+    "TEXT": [
+      " | Cost: "
+    ],
+    "EXTRA_TEXT": [
+    ],
+    "TEXT_DICT": {
+    }
+  }
+}
